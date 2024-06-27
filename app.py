@@ -24,3 +24,6 @@ def get_weather_data(city):
     weather_data = json.loads(response.text)
     return weather_data
 
+if __name__ == '__main__':
+    app.run(debug=True)
+

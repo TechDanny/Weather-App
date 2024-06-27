@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App|{{ title }}</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
     <div class="container">
-        <h1>Weather App</h1>
-        <form method="post">
-            <input type="text" name="city" placeholder="Enter city name" required>
-            <input type="submit" value="Get Weather">
-        </form>
-        {% if weather_data %}
-            <div class="weather-info">
-                <h2>{{ weather_data['name'] }}, {{ weather_data['sys']['country'] }}</h2>
-                <p>{{ weather_data['weather'][0]['description'] }}</p>
-                <p>Temperature: {{ weather_data['main']['temp'] }}°C</p>
-                <p>Humidity: {{ weather_data['main']['humidity'] }}%</p>
-                <p>Wind Speed: {{ weather_data['wind']['speed'] }} m/s</p>
-            </div>
-        {% endif %}
+      <h1>Weather App</h1>
+      <form method="post">
+        <input type="text" name="city" placeholder="Enter city name" required />
+        <input type="submit" value="Get Weather" />
+      </form>
+      {% if weather_data %}
+      <div class="weather-info">
+        <h2>
+          {{ weather_data['name'] }}, {{ weather_data['sys']['country'] }}
+        </h2>
+        <p>{{ weather_data['weather'][0]['description'] }}</p>
+        <p>Temperature: {{ weather_data['main']['temp'] }}°C</p>
+        <p>Humidity: {{ weather_data['main']['humidity'] }}%</p>
+        <p>Wind Speed: {{ weather_data['wind']['speed'] }} m/s</p>
+      </div>
+      {% endif %}
     </div>
     <footer id="footer">
-        <a href="https://twitter.com/_musauu" target="_blank">
-          <i class="social-icon fa-brands fa-x-twitter fa-xl"></i></a>
-    
-        <a href="https://github.com/TechDanny" target="_blank">
-          <i class="social-icon fa-brands fa-github fa-lg"></i></a>
-    
-        <a href="mailto:kokidanny15@gmail.com">
-          <i class="social-icon fa-solid fa-envelope fa-xl"></i></a>
-    
-        <a href="https://www.linkedin.com/in/duncan-musau-79681220a/" target="_blank">
-          <i class="social-icon fa-brands fa-linkedin fa-xl"></i></a>
-    
-        <p class="copyright">©2024 Copyright Weather App</p>
-    
-      </footer>
-</body>
+      <a href="https://twitter.com/_musauu" target="_blank">
+        <i class="social-icon fa-brands fa-x-twitter fa-xl"></i
+      ></a>
+
+      <a href="https://github.com/TechDanny" target="_blank">
+        <i class="social-icon fa-brands fa-github fa-lg"></i
+      ></a>
+
+      <a href="mailto:kokidanny15@gmail.com">
+        <i class="social-icon fa-solid fa-envelope fa-xl"></i
+      ></a>
+
+      <a
+        href="https://www.linkedin.com/in/duncan-musau-79681220a/"
+        target="_blank"
+      >
+        <i class="social-icon fa-brands fa-linkedin fa-xl"></i
+      ></a>
+
+      <p class="copyright">©2024 Copyright Weather App</p>
+    </footer>
+  </body>
 </html>
